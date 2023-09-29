@@ -1,0 +1,112 @@
+USE AtlasBooks
+
+
+IF OBJECT_ID('PK_Branch') is not null
+	BEGIN
+		ALTER TABLE Branch
+		DROP PK_Branch
+	END
+GO
+IF OBJECT_ID('PK_Room') is not null 
+	BEGIN
+		ALTER TABLE Room
+		DROP PK_Room
+	END
+GO
+IF OBJECT_ID('PK_Shelving') is not null
+	BEGIN
+		ALTER TABLE Shelving
+		DROP PK_Shelving
+	END
+GO
+IF OBJECT_ID('PK_Shelf') is not null
+	BEGIN
+		ALTER TABLE Shelf
+		DROP PK_Shelf
+	END
+GO
+IF OBJECT_ID('PK_Section') is not null
+	BEGIN
+		ALTER TABLE Section
+		DROP PK_Section
+	END
+GO
+IF OBJECT_ID('PK_Book') is not null
+	BEGIN
+		ALTER TABLE Book
+		DROP PK_Book
+	END
+GO
+IF OBJECT_ID('PK_Role') is not null
+	BEGIN
+		ALTER TABLE [Role]
+		DROP PK_Role
+	END
+GO
+IF OBJECT_ID('PK_User') is not null
+	BEGIN
+		ALTER TABLE [User]
+		DROP PK_User
+	END
+GO
+IF OBJECT_ID('PK_Loan') is not null
+	BEGIN
+		ALTER TABLE Loan
+		DROP PK_Loan
+	END
+GO
+
+
+
+ALTER TABLE [Branch]
+ADD CONSTRAINT PK_Branch
+PRIMARY KEY (branchId)
+GO
+
+
+ALTER TABLE [Room]
+ADD CONSTRAINT PK_Room
+PRIMARY KEY (roomId)
+GO
+
+
+ALTER TABLE [Shelving]
+ADD CONSTRAINT PK_Shelving
+PRIMARY KEY (shelvingId)
+GO
+
+
+ALTER TABLE [Shelf]
+ADD CONSTRAINT PK_Shelf 
+PRIMARY KEY (shelfId)
+GO
+
+
+ALTER TABLE [Section]
+ADD CONSTRAINT PK_Section 
+PRIMARY KEY (sectionId)
+GO
+
+
+ALTER TABLE [Book]
+ADD CONSTRAINT PK_Book 
+PRIMARY KEY (bookId)
+GO
+
+
+ALTER TABLE [Role]
+ADD CONSTRAINT PK_Role
+PRIMARY KEY (roleId)
+GO
+
+
+ALTER TABLE [User]
+ADD CONSTRAINT PK_User 
+PRIMARY KEY (userId)
+GO
+
+
+ALTER TABLE [Loan]
+ADD CONSTRAINT PK_Loan 
+PRIMARY KEY (loanId)
+GO
