@@ -1,6 +1,6 @@
 USE AtlasBooks
 GO
-
+--- CAMBIAR NOMBRE
 --- START Book with active regs
 IF OBJECT_ID('abVwBook') IS NOT NULL
 	DROP VIEW abVwBook;
@@ -172,7 +172,7 @@ GO
 IF OBJECT_ID('abVwLoanStatus') IS NOT NULL
 	DROP VIEW abVwLoanStatus
 GO
-
+--- CREAR FUNCION PARA LAS FECHAS
 CREATE VIEW abVwLoanStatus
 AS
 SELECT 
