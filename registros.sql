@@ -399,6 +399,7 @@ exec abInsBook 1, 'The Innovators', 'How a Group of Hackers, Geniuses, and Geeks
 
 --- ROLE
 exec abInsRole 1, 'user', 'user access';
+exec abInsRole 1, 'guest', 'guest access';
 --- ROLE
 
 --- USER
